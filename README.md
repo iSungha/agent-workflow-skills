@@ -2,17 +2,17 @@
 
 Reusable, evidence-first workflows for agents that assess job fit, track application history, tailor and validate resumes, evaluate grounded AI output, and inspect rendered interfaces. They combine model judgment with checks that can be repeated or measured, and keep uncertain claims visible for human review.
 
-These are portable Agent Skills documents. They are designed to be adapted to a user's evidence, toolchain, and policies; they are not a candidate profile, an application service, or a collection of prompts that claim to automate hiring decisions.
+These are portable Agent Skills documents. They are designed to be adapted to a user's evidence, toolchain, and policies; they are not a candidate profile, an application service, or a collection of prompts that claim to automate hiring decisions. Each skill folder has a human-facing `README.md`; its `SKILL.md` is the agent workflow.
 
 ## Skills
 
 | Skill | Use it for | Main result |
 | --- | --- | --- |
-| [Job Fit Auditor](skills/job-fit-auditor/SKILL.md) | Comparing a candidate's evidence with live job requirements | A source-linked requirement matrix, eligibility flags, and a transparent ranking |
-| [Gmail Application Index](skills/gmail-application-index/SKILL.md) | Building or refreshing an evidence-backed Gmail application history | A durable, account-bound index with sourced events, action state, and scan coverage |
-| [Resume PDF Validator](skills/resume-pdf-validator/SKILL.md) | Tailoring an existing resume and checking the exported document | A fact-checked resume with page, text, layout, and role-term validation |
-| [Grounded Output Evaluator](skills/grounded-output-evaluator/SKILL.md) | Testing AI answers against supplied source material | Claim-level support findings and repeatable regression results |
-| [Visual UI Evidence Auditor](skills/visual-ui-evidence-auditor/SKILL.md) | Reviewing a real interface against an expected visual and interaction contract | A reproducible set of rendered-state observations and unresolved defects |
+| [Job Fit Auditor](skills/job-fit-auditor/README.md) | Comparing a candidate's evidence with live job requirements | A source-linked requirement matrix, eligibility flags, and a transparent ranking |
+| [Gmail Application Index](skills/gmail-application-index/README.md) | Building or refreshing an evidence-backed Gmail application history | A durable, account-bound index with sourced events, action state, and scan coverage |
+| [Resume PDF Validator](skills/resume-pdf-validator/README.md) | Tailoring an existing resume and checking the exported document | A fact-checked resume with page, text, layout, and role-term validation |
+| [Grounded Output Evaluator](skills/grounded-output-evaluator/README.md) | Testing AI answers against supplied source material | Claim-level support findings and repeatable regression results |
+| [Visual UI Evidence Auditor](skills/visual-ui-evidence-auditor/README.md) | Reviewing a real interface against an expected visual and interaction contract | A reproducible set of rendered-state observations and unresolved defects |
 
 These five workflows cover distinct decisions that otherwise rely on unstructured model judgment: matching evidence to requirements, tracking email-backed application events, checking a final document, testing source support across repeated outputs, and verifying the interface users actually see. Each remains useful on its own and keeps evidence gathering separate from conclusions.
 
