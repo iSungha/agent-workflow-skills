@@ -1,6 +1,6 @@
 # Agent Workflow Skills
 
-Reusable, evidence-first workflows for agents that audit job fit, tailor and validate resumes, evaluate grounded AI output, and inspect rendered interfaces. They combine model judgment with checks that can be repeated or measured, and keep uncertain claims visible for human review.
+Reusable, evidence-first workflows for agents that assess job fit, track application history, tailor and validate resumes, evaluate grounded AI output, and inspect rendered interfaces. They combine model judgment with checks that can be repeated or measured, and keep uncertain claims visible for human review.
 
 These are portable Agent Skills documents. They are designed to be adapted to a user's evidence, toolchain, and policies; they are not a candidate profile, an application service, or a collection of prompts that claim to automate hiring decisions.
 
@@ -9,11 +9,12 @@ These are portable Agent Skills documents. They are designed to be adapted to a 
 | Skill | Use it for | Main result |
 | --- | --- | --- |
 | [Job Fit Auditor](skills/job-fit-auditor/SKILL.md) | Comparing a candidate's evidence with live job requirements | A source-linked requirement matrix, eligibility flags, and a transparent ranking |
+| [Gmail Application Index](skills/gmail-application-index/SKILL.md) | Building or refreshing an evidence-backed Gmail application history | A durable, account-bound index with sourced events, action state, and scan coverage |
 | [Resume PDF Validator](skills/resume-pdf-validator/SKILL.md) | Tailoring an existing resume and checking the exported document | A fact-checked resume with page, text, layout, and role-term validation |
 | [Grounded Output Evaluator](skills/grounded-output-evaluator/SKILL.md) | Testing AI answers against supplied source material | Claim-level support findings and repeatable regression results |
 | [Visual UI Evidence Auditor](skills/visual-ui-evidence-auditor/SKILL.md) | Reviewing a real interface against an expected visual and interaction contract | A reproducible set of rendered-state observations and unresolved defects |
 
-These four workflows are useful together because they cover distinct decisions that otherwise rely on unstructured model judgment: matching evidence to requirements, checking a final document, testing source support across repeated outputs, and verifying the interface users actually see. Each remains useful on its own and keeps evidence gathering separate from conclusions.
+These five workflows cover distinct decisions that otherwise rely on unstructured model judgment: matching evidence to requirements, tracking email-backed application events, checking a final document, testing source support across repeated outputs, and verifying the interface users actually see. Each remains useful on its own and keeps evidence gathering separate from conclusions.
 
 ## Use a skill
 
@@ -23,7 +24,7 @@ Start with the task-specific skill and supply only the evidence needed for that 
 
 > Audit this posting against my candidate profile. Read the full employer description, distinguish required from preferred qualifications, cite profile evidence for each match, flag missing eligibility or salary facts, and explain the ranking.
 
-Other examples: ask the resume validator to check a tailored PDF against its source evidence and a one-page limit; ask the output evaluator to compare a fixed set of AI answers with cited source spans; ask the visual auditor to inspect a real route at the target viewport and report measured differences from a supplied reference.
+Other examples: ask the Gmail Application Index to report whether an exact application has a receipt and a later assessment request while distinguishing requested from completed; ask the resume validator to check a tailored PDF against its source evidence and a one-page limit; ask the output evaluator to compare a fixed set of AI answers with cited source spans; ask the visual auditor to inspect a real route at the target viewport and report measured differences from a supplied reference.
 
 For a resume review, provide the job posting, authoritative candidate evidence, the current resume source, and the final PDF. For an AI-output evaluation, provide the fixed test cases, expected evidence, model output, and the evaluator's rubric. For a UI review, identify the actual route/state, expected behavior, viewport, and the means to inspect the rendered interface.
 

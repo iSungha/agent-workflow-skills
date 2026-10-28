@@ -1,0 +1,14 @@
+interface:
+  display_name: Gmail Application Index
+  short_description: Remember job applications and sync only new emails
+  default_prompt: Use $gmail-application-index to index my last 60 days of job emails
+    and check application status.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
