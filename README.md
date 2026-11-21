@@ -4,7 +4,18 @@ Reusable, evidence-first workflows for agents that build and review software, ev
 
 These portable Agent Skills work with Codex and other compatible coding agents. Adapt them to the project's tools and instructions. Each skill folder has a human-facing `README.md` and an agent-facing `SKILL.md`.
 
-## Skills
+## Software Engineering Skills
+
+| Skill | Use it for | Main result |
+| --- | --- | --- |
+| [Design to Code](skills/design-to-code/README.md) | Implementing an approved handoff in an existing application | Working UI that follows the design and preserves application behavior |
+| [Frontend Engineering](skills/frontend-engineering/README.md) | Building or fixing components, state, forms, routing, and API integration | A focused change with explicit ownership and behavior checks |
+| [Frontend Refactoring](skills/frontend-refactoring/README.md) | Addressing coupling, duplicated policy, or unclear style and state ownership | A structural change with evidence that existing behavior still works |
+| [Backend Engineering](skills/backend-engineering/README.md) | Designing or changing APIs, services, data writes, and background jobs | Explicit authorization, persistence, and recovery behavior with boundary checks |
+| [Mobile UI Engineering](skills/mobile-ui-engineering/README.md) | Implementing native and cross-platform screens, navigation, and interactions | Working mobile UI with device and platform coverage recorded |
+| [Visual UI Evidence Auditor](skills/visual-ui-evidence-auditor/README.md) | Independently reviewing rendered UI against visual and interaction requirements | Reproducible observations, measurements, defects, and unverified states |
+
+## Other Agent Skills
 
 | Skill | Use it for | Main result |
 | --- | --- | --- |
@@ -12,12 +23,6 @@ These portable Agent Skills work with Codex and other compatible coding agents. 
 | [Gmail Application Index](skills/gmail-application-index/README.md) | Building or refreshing an evidence-backed Gmail application history | A durable, account-bound index with sourced events, action state, and scan coverage |
 | [Resume PDF Validator](skills/resume-pdf-validator/README.md) | Tailoring an existing resume and checking the exported document | A fact-checked resume with page, text, layout, and role-term validation |
 | [Grounded Output Evaluator](skills/grounded-output-evaluator/README.md) | Testing AI answers against supplied source material | Claim-level support findings and repeatable regression results |
-| [Design to Code](skills/design-to-code/README.md) | Implementing an approved handoff in an existing application | Working UI that follows the design and preserves application behavior |
-| [Frontend Engineering](skills/frontend-engineering/README.md) | Building or fixing components, state, forms, routing, and API integration | A focused change with explicit ownership and behavior checks |
-| [Frontend Refactoring](skills/frontend-refactoring/README.md) | Addressing coupling, duplicated policy, or unclear style and state ownership | A structural change with evidence that existing behavior still works |
-| [Backend Engineering](skills/backend-engineering/README.md) | Designing or changing APIs, services, data writes, and background jobs | Explicit authorization, persistence, and recovery behavior with boundary checks |
-| [Mobile UI Engineering](skills/mobile-ui-engineering/README.md) | Implementing native and cross-platform screens, navigation, and interactions | Working mobile UI with device and platform coverage recorded |
-| [Visual UI Evidence Auditor](skills/visual-ui-evidence-auditor/README.md) | Independently reviewing rendered UI against visual and interaction requirements | Reproducible observations, measurements, defects, and unverified states |
 
 Choose Design to Code when an approved handoff drives the implementation, Frontend Engineering when the task changes application behavior, or Frontend Refactoring when the task changes structure while preserving behavior. Mobile UI Engineering covers native runtime and platform behavior. Use the Visual UI Evidence Auditor when the deliverable is a review of a rendered interface. Each skill can be used independently.
 
