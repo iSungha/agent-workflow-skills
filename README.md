@@ -23,6 +23,7 @@ These portable Agent Skills work with Codex and other compatible coding agents. 
 | [Gmail Application Index](skills/gmail-application-index/README.md) | Building or refreshing an evidence-backed Gmail application history | A durable, account-bound index with sourced events, action state, and scan coverage |
 | [Resume PDF Validator](skills/resume-pdf-validator/README.md) | Tailoring an existing resume and checking the exported document | A fact-checked resume with page, text, layout, and role-term validation |
 | [Grounded Output Evaluator](skills/grounded-output-evaluator/README.md) | Testing AI answers against supplied source material | Claim-level support findings and repeatable regression results |
+| [Agent Task Handoff](skills/agent-task-handoff/README.md) | Turning a rough development request into a prompt for Codex or Claude Code | A ready-to-review execution prompt with scope, acceptance checks, and approval boundaries |
 
 Choose Design to Code when an approved handoff drives the implementation, Frontend Engineering when the task changes application behavior, or Frontend Refactoring when the task changes structure while preserving behavior. Mobile UI Engineering covers native runtime and platform behavior. Use the Visual UI Evidence Auditor when the deliverable is a review of a rendered interface. Each skill can be used independently.
 
