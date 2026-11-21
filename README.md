@@ -39,6 +39,17 @@ For a resume review, provide the job posting, authoritative candidate evidence, 
 
 The skill instructions are tool-agnostic. A workflow may use a browser, shell, PDF reader, image viewer, or test runner already available in the host environment. PDF checks can use tools such as `pdfinfo`, `pdftotext`, Poppler rendering, or a PDF library. Visual review needs access to the real rendered state and a way to inspect screenshots. The AI-output evaluator can run manually with a source packet or use an existing test harness. Install only what the chosen task requires and what the user authorizes.
 
+## Recommended Companion Skills & Tools
+
+These optional companions add repository context to the focused implementation and review workflows above. The [Acquire Codebase Knowledge][acquire-codebase-knowledge] and [Context Map][context-map] Agent Skills come from GitHub's [awesome-copilot][awesome-copilot] maintainers. [Codebase Memory MCP][codebase-memory-mcp], maintained by DeusData, is an MCP tool rather than an Agent Skill.
+
+Use them when useful for repository-wide architectural understanding, focused dependency mapping, or reusable codebase context. Reusing that knowledge can reduce repeated file reads, unnecessary token consumption, and isolated fixes that overlook system-wide dependencies. Results depend on the repository, setup, and task; these companions are not requirements and do not guarantee token savings or correctness.
+
+[acquire-codebase-knowledge]: https://github.com/github/awesome-copilot/tree/main/skills/acquire-codebase-knowledge
+[context-map]: https://github.com/github/awesome-copilot/tree/main/skills/context-map
+[codebase-memory-mcp]: https://github.com/DeusData/codebase-memory-mcp
+[awesome-copilot]: https://github.com/github/awesome-copilot
+
 ## Evidence and validation
 
 Use primary sources and preserve their links or file references. Keep observed facts, model interpretations, calculations, and unknowns separate. A score describes alignment with the supplied criteria; it does not estimate hiring probability or guarantee answer quality. Mechanical checks establish only the properties they measure. Human review remains necessary for factual meaning, ambiguous requirements, visual quality, and consequential decisions.
