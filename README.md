@@ -1,8 +1,8 @@
 # Agent Workflow Skills
 
-Reusable, evidence-first workflows for agents that assess job fit, track application history, tailor and validate resumes, evaluate grounded AI output, and inspect rendered interfaces. They combine model judgment with checks that can be repeated or measured, and keep uncertain claims visible for human review.
+Reusable, evidence-first workflows for agents that build and review software, evaluate grounded AI output, and work with job application evidence. Each workflow ties its conclusions to checks that can be repeated or reviewed.
 
-These are portable Agent Skills documents. They are designed to be adapted to a user's evidence, toolchain, and policies; they are not a candidate profile, an application service, or a collection of prompts that claim to automate hiring decisions. Each skill folder has a human-facing `README.md`; its `SKILL.md` is the agent workflow.
+These portable Agent Skills work with Codex and other compatible coding agents. Adapt them to the project's tools and instructions. Each skill folder has a human-facing `README.md` and an agent-facing `SKILL.md`.
 
 ## Skills
 
@@ -12,9 +12,14 @@ These are portable Agent Skills documents. They are designed to be adapted to a 
 | [Gmail Application Index](skills/gmail-application-index/README.md) | Building or refreshing an evidence-backed Gmail application history | A durable, account-bound index with sourced events, action state, and scan coverage |
 | [Resume PDF Validator](skills/resume-pdf-validator/README.md) | Tailoring an existing resume and checking the exported document | A fact-checked resume with page, text, layout, and role-term validation |
 | [Grounded Output Evaluator](skills/grounded-output-evaluator/README.md) | Testing AI answers against supplied source material | Claim-level support findings and repeatable regression results |
-| [Visual UI Evidence Auditor](skills/visual-ui-evidence-auditor/README.md) | Reviewing a real interface against an expected visual and interaction contract | A reproducible set of rendered-state observations and unresolved defects |
+| [Design to Code](skills/design-to-code/README.md) | Implementing an approved handoff in an existing application | Working UI that follows the design and preserves application behavior |
+| [Frontend Engineering](skills/frontend-engineering/README.md) | Building or fixing components, state, forms, routing, and API integration | A focused change with explicit ownership and behavior checks |
+| [Frontend Refactoring](skills/frontend-refactoring/README.md) | Addressing coupling, duplicated policy, or unclear style and state ownership | A structural change with evidence that existing behavior still works |
+| [Backend Engineering](skills/backend-engineering/README.md) | Designing or changing APIs, services, data writes, and background jobs | Explicit authorization, persistence, and recovery behavior with boundary checks |
+| [Mobile UI Engineering](skills/mobile-ui-engineering/README.md) | Implementing native and cross-platform screens, navigation, and interactions | Working mobile UI with device and platform coverage recorded |
+| [Visual UI Evidence Auditor](skills/visual-ui-evidence-auditor/README.md) | Independently reviewing rendered UI against visual and interaction requirements | Reproducible observations, measurements, defects, and unverified states |
 
-These five workflows cover distinct decisions that otherwise rely on unstructured model judgment: matching evidence to requirements, tracking email-backed application events, checking a final document, testing source support across repeated outputs, and verifying the interface users actually see. Each remains useful on its own and keeps evidence gathering separate from conclusions.
+Choose Design to Code when an approved handoff drives the implementation, Frontend Engineering when the task changes application behavior, or Frontend Refactoring when the task changes structure while preserving behavior. Mobile UI Engineering covers native runtime and platform behavior. Use the Visual UI Evidence Auditor when the deliverable is a review of a rendered interface. Each skill can be used independently.
 
 ## Use a skill
 
@@ -25,6 +30,8 @@ Start with the task-specific skill and supply only the evidence needed for that 
 > Audit this posting against my candidate profile. Read the full employer description, distinguish required from preferred qualifications, cite profile evidence for each match, flag missing eligibility or salary facts, and explain the ranking.
 
 Other examples: ask the Gmail Application Index to report whether an exact application has a receipt and a later assessment request while distinguishing requested from completed; ask the resume validator to check a tailored PDF against its source evidence and a one-page limit; ask the output evaluator to compare a fixed set of AI answers with cited source spans; ask the visual auditor to inspect a real route at the target viewport and report measured differences from a supplied reference.
+
+For an engineering example, give Design to Code an approved settings layout, the existing route, and the save and cancel behavior to preserve. For a backend reliability change, give Backend Engineering the current operation contract and the expected result of simultaneous or repeated requests.
 
 For a resume review, provide the job posting, authoritative candidate evidence, the current resume source, and the final PDF. For an AI-output evaluation, provide the fixed test cases, expected evidence, model output, and the evaluator's rubric. For a UI review, identify the actual route/state, expected behavior, viewport, and the means to inspect the rendered interface.
 
@@ -50,4 +57,4 @@ Keep additions small and independently useful. Use synthetic examples, preserve 
 
 ## License
 
-This repository's original documentation and examples are released under the [MIT License](LICENSE). No source project, internal prompt, personal profile, or third-party code is included.
+This repository's original documentation and examples are released under the [MIT License](LICENSE). The engineering skills use newly written guidance and fictional examples. They draw on general engineering practices without incorporating private playbooks, third-party skill text, scripts, or design assets.

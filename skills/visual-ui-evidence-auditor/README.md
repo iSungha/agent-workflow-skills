@@ -4,22 +4,26 @@
 
 ## What it helps you do
 
-Review the interface users actually see against a stated design or interaction contract. The workflow captures the real rendered state and reports reproducible observations and measurements.
+Review a rendered interface against a stated design or interaction contract. Record observations and measurements that another reviewer can reproduce.
 
 ## When to use it
 
-Use it for visual regressions, layout reviews, or checking whether important controls remain visible and usable at specified viewports.
+Use it for an independent visual review, a layout regression, or a check that controls remain visible and usable at specified viewports. Use Design to Code to implement an approved design.
 
 ## What to provide
 
 - The running application and the route or state to inspect.
 - A design reference or explicit expected appearance and behavior.
-- Browser and viewport details, including zoom or device scale when relevant.
+- Browser or native runtime and viewport or device details, including zoom or scale when relevant.
 - Authorized access to capture and inspect the rendered interface.
 
 ## What you get
 
-A record of the inspected route and state, screenshots, measured differences, relevant interaction checks, observed defects, and limitations.
+A record of the inspected state and evidence, with passed, failed, and unverified checks. Findings describe the expected result, what happened, and how to reproduce it.
+
+## Example request
+
+> Audit the fictional settings dialog at the supplied viewport. Check whether the Save label and focus outline are fully visible, and document the steps and evidence for each result.
 
 ## Limits
 
